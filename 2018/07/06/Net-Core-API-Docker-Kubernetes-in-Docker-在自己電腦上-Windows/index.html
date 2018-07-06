@@ -118,7 +118,7 @@
 <meta property="og:description" content="需求今年 DOCKER宣布支持 K8S所以就玩看看囉 (記得抓EDGE版本才有K8S) 指令步驟建置WEBAPI並且測試1234dotnet new WebAPIdotnet builddotnet runPostMan Get http://localhost:5000/api/Values 寫Dockerfile + Build + RUN Test1234567891011121314151">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="https://markchan1209.github.io/images/K8S.png">
-<meta property="og:updated_time" content="2018-07-06T11:22:04.202Z">
+<meta property="og:updated_time" content="2018-07-06T13:19:35.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=".Net Core API + Docker + Kubernetes in Docker 在自己電腦上 (Windows)">
 <meta name="twitter:description" content="需求今年 DOCKER宣布支持 K8S所以就玩看看囉 (記得抓EDGE版本才有K8S) 指令步驟建置WEBAPI並且測試1234dotnet new WebAPIdotnet builddotnet runPostMan Get http://localhost:5000/api/Values 寫Dockerfile + Build + RUN Test1234567891011121314151">
@@ -358,12 +358,18 @@
 <p>在終端機 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 80:80 --name webapi netcorewebapi:v1</span><br></pre></td></tr></table></figure>
 <p>會看到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]</span><br><span class="line">      No XML encryptor configured. Key &#123;05f3cd18-ab35-4741-b083-47723af52a8b&#125; may be persisted to storage in unencrypted form.</span><br><span class="line">Hosting environment: Production</span><br><span class="line">Content root path: /app</span><br><span class="line">Now listening on: http://[::]:80</span><br><span class="line">Application started. Press Ctrl+C to shut down.</span><br></pre></td></tr></table></figure></p>
-<h2 id="寫K8S-file"><a href="#寫K8S-file" class="headerlink" title="寫K8S file"></a>寫K8S file</h2><p>用VSCode記得安裝外掛 kubernetes Support + Kubernetes<br>創一個 deploy.yaml檔案<br>在畫面中打dn 就會自帶snippets 版本如下</p>
+<h2 id="寫K8S-file-DEPLOY"><a href="#寫K8S-file-DEPLOY" class="headerlink" title="寫K8S file + DEPLOY"></a>寫K8S file + DEPLOY</h2><p>用VSCode記得安裝外掛 kubernetes Support + Kubernetes<br>創一個 deploy.yaml檔案<br>在畫面中打dn按Tab就會自帶snippets 版本如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">apiVersion: extensions/v1beta1</span><br><span class="line">kind: Deployment</span><br><span class="line">metadata:</span><br><span class="line">  name: Enter deployment name</span><br><span class="line">spec:</span><br><span class="line">  replicas: Enter the number of replicas</span><br><span class="line">  template:</span><br><span class="line">    metadata:</span><br><span class="line">      labels:</span><br><span class="line">        editor: vscode</span><br><span class="line">    spec:</span><br><span class="line">      containers:</span><br><span class="line">      - name: name</span><br><span class="line">        image: Enter containers image</span><br></pre></td></tr></table></figure>
 <p>發現了一個很異常的問題。<br>使用Kubectl出現相衝問題 (電腦有灌 minikube , Google CloudSDK)<br>所以設定跑到GOOGLE的K8S那邊</p>
 <p>通過指令先移除 GOOGLE k8S<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcloud components remove kubectl</span><br></pre></td></tr></table></figure></p>
 <p>再透過DOCKER SETTING UI  RESET KUBERNETES設定<br>再透過指令切換到DOCKER的K8S即可</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl config use-context docker-for-desktop</span><br></pre></td></tr></table></figure>
+<p>接著就開始部屬<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kubectl deploy -f deploy.yaml </span><br><span class="line"></span><br><span class="line">```開PORT給外部連線</span><br></pre></td></tr></table></figure></p>
+<p>kubectl expose -f deploy.yaml –type=NodePort</p>
+<p><code>`</code></p>
+<p>剩下的改天寫~~~</p>
+<h2 id="參考連結"><a href="#參考連結" class="headerlink" title="參考連結"></a>參考連結</h2><p><a href="https://docs.docker.com/docker-for-windows/#kubernetes" target="_blank" rel="noopener">https://docs.docker.com/docker-for-windows/#kubernetes</a><br><a href="https://stackoverflow.com/questions/36880680/how-to-reset-my-kubectl-settings-back-to-default" target="_blank" rel="noopener">https://stackoverflow.com/questions/36880680/how-to-reset-my-kubectl-settings-back-to-default</a><br><a href="https://www.youtube.com/watch?v=sC6_iwmqZ_E" target="_blank" rel="noopener">https://www.youtube.com/watch?v=sC6_iwmqZ_E</a></p>
+
       
     </div>
     
@@ -599,7 +605,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#需求"><span class="nav-number">1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#指令步驟"><span class="nav-number">2.</span> <span class="nav-text">指令步驟</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#建置WEBAPI並且測試"><span class="nav-number">2.1.</span> <span class="nav-text">建置WEBAPI並且測試</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#寫Dockerfile-Build-RUN-Test"><span class="nav-number">2.2.</span> <span class="nav-text">寫Dockerfile + Build + RUN Test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#寫K8S-file"><span class="nav-number">2.3.</span> <span class="nav-text">寫K8S file</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#需求"><span class="nav-number">1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#指令步驟"><span class="nav-number">2.</span> <span class="nav-text">指令步驟</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#建置WEBAPI並且測試"><span class="nav-number">2.1.</span> <span class="nav-text">建置WEBAPI並且測試</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#寫Dockerfile-Build-RUN-Test"><span class="nav-number">2.2.</span> <span class="nav-text">寫Dockerfile + Build + RUN Test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#寫K8S-file-DEPLOY"><span class="nav-number">2.3.</span> <span class="nav-text">寫K8S file + DEPLOY</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#參考連結"><span class="nav-number">2.4.</span> <span class="nav-text">參考連結</span></a></li></ol></li></ol></div>
             
 
           </div>
