@@ -98,7 +98,7 @@
 
 
 
-  <meta name="keywords" content="CAPY,Andriod,Web,JavaSciprt,.Net," />
+  <meta name="keywords" content="Kubernetes,Minikue,Docker," />
 
 
 
@@ -109,20 +109,18 @@
 
 
 
-<meta name="description" content="需求  公司需要做拼圖驗證，上面找了一家日本廠商CAPY的拼圖驗證平台做串接，成功時候要回傳Andriod的JS CAPY拼圖驗證介紹特色 後台可以監控拼圖使用數據、設定拼圖模式、格式、難度。 (剩下請看官網)  CAPY 拼圖驗證流程  第一、第二 步驟 進入WEB 第三、第四 步驟 換拼圖驗證 第五、第六、第七 步驟 驗證拼圖  串接方式 進入CAPY廠商後台， 選擇 Puzzle CAPTC">
-<meta name="keywords" content="CAPY,Andriod,Web,JavaSciprt,.Net">
+<meta name="description" content="目的玩了一下離線版的K8S目前有的版本K8S in Docker Edge vesionminikube  都大同小異 連結Kubernetes網站都有教學 Minikube 常用指令查版本1minikube version 啟動一個CluSTER1minikube start check health1kubectl cluster-info DEPLOY一個DOCKER到K8S上 開通80PO">
+<meta name="keywords" content="Kubernetes,Minikue,Docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CAPY拼圖驗證 WEB + Andriod">
-<meta property="og:url" content="https://markchan1209.github.io/2018/07/04/CAPD-拼圖驗證串接/index.html">
+<meta property="og:title" content="Kubernetes 入門 -Part1">
+<meta property="og:url" content="https://markchan1209.github.io/2018/07/07/Kubernetes-入門-Part1/index.html">
 <meta property="og:site_name" content="Mark Chan&#39;s Blog">
-<meta property="og:description" content="需求  公司需要做拼圖驗證，上面找了一家日本廠商CAPY的拼圖驗證平台做串接，成功時候要回傳Andriod的JS CAPY拼圖驗證介紹特色 後台可以監控拼圖使用數據、設定拼圖模式、格式、難度。 (剩下請看官網)  CAPY 拼圖驗證流程  第一、第二 步驟 進入WEB 第三、第四 步驟 換拼圖驗證 第五、第六、第七 步驟 驗證拼圖  串接方式 進入CAPY廠商後台， 選擇 Puzzle CAPTC">
+<meta property="og:description" content="目的玩了一下離線版的K8S目前有的版本K8S in Docker Edge vesionminikube  都大同小異 連結Kubernetes網站都有教學 Minikube 常用指令查版本1minikube version 啟動一個CluSTER1minikube start check health1kubectl cluster-info DEPLOY一個DOCKER到K8S上 開通80PO">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://markchan1209.github.io/images/puzzle_document_en_001.png">
-<meta property="og:updated_time" content="2018-07-04T10:45:05.445Z">
+<meta property="og:updated_time" content="2018-07-07T08:44:13.210Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CAPY拼圖驗證 WEB + Andriod">
-<meta name="twitter:description" content="需求  公司需要做拼圖驗證，上面找了一家日本廠商CAPY的拼圖驗證平台做串接，成功時候要回傳Andriod的JS CAPY拼圖驗證介紹特色 後台可以監控拼圖使用數據、設定拼圖模式、格式、難度。 (剩下請看官網)  CAPY 拼圖驗證流程  第一、第二 步驟 進入WEB 第三、第四 步驟 換拼圖驗證 第五、第六、第七 步驟 驗證拼圖  串接方式 進入CAPY廠商後台， 選擇 Puzzle CAPTC">
-<meta name="twitter:image" content="https://markchan1209.github.io/images/puzzle_document_en_001.png">
+<meta name="twitter:title" content="Kubernetes 入門 -Part1">
+<meta name="twitter:description" content="目的玩了一下離線版的K8S目前有的版本K8S in Docker Edge vesionminikube  都大同小異 連結Kubernetes網站都有教學 Minikube 常用指令查版本1minikube version 啟動一個CluSTER1minikube start check health1kubectl cluster-info DEPLOY一個DOCKER到K8S上 開通80PO">
 
 
 
@@ -152,13 +150,13 @@
 
 
 
-  <link rel="canonical" href="https://markchan1209.github.io/2018/07/04/CAPD-拼圖驗證串接/"/>
+  <link rel="canonical" href="https://markchan1209.github.io/2018/07/07/Kubernetes-入門-Part1/"/>
 
 
 
 
 
-  <title>CAPY拼圖驗證 WEB + Andriod | Mark Chan's Blog</title>
+  <title>Kubernetes 入門 -Part1 | Mark Chan's Blog</title>
   
 
 
@@ -285,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://markchan1209.github.io/2018/07/04/CAPD-拼圖驗證串接/">
+    <link itemprop="mainEntityOfPage" href="https://markchan1209.github.io/2018/07/07/Kubernetes-入門-Part1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mark Chan">
@@ -302,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CAPY拼圖驗證 WEB + Andriod</h1>
+          <h1 class="post-title" itemprop="name headline">Kubernetes 入門 -Part1</h1>
         
 
         <div class="post-meta">
@@ -314,8 +312,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-07-04T17:21:50+08:00">
-                2018-07-04
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-07-07T16:43:50+08:00">
+                2018-07-07
               </time>
             
 
@@ -337,8 +335,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/work/" itemprop="url" rel="index">
-                    <span itemprop="name">work</span>
+                  <a href="/categories/DevOps/" itemprop="url" rel="index">
+                    <span itemprop="name">DevOps</span>
                   </a>
                 </span>
 
@@ -374,27 +372,26 @@
       
 
       
-        <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>  公司需要做拼圖驗證，上面找了一家日本廠商<a href="https://www.capy.me/" target="_blank" rel="noopener">CAPY</a>的拼圖驗證平台做串接，成功時候要回傳Andriod的JS</p>
-<h1 id="CAPY拼圖驗證介紹"><a href="#CAPY拼圖驗證介紹" class="headerlink" title="CAPY拼圖驗證介紹"></a>CAPY拼圖驗證介紹</h1><h2 id="特色"><a href="#特色" class="headerlink" title="特色"></a>特色</h2><ul>
-<li>後台可以監控拼圖使用數據、設定拼圖模式、格式、難度。 (剩下請看<a href="https://www.capy.me/" target="_blank" rel="noopener">官網</a>)</li>
-</ul>
-<h1 id="CAPY-拼圖驗證流程"><a href="#CAPY-拼圖驗證流程" class="headerlink" title="CAPY 拼圖驗證流程"></a>CAPY 拼圖驗證流程</h1><p><img src="/images/puzzle_document_en_001.png" alt="CAPY 流程"></p>
-<ul>
-<li>第一、第二 步驟 進入WEB</li>
-<li>第三、第四 步驟 換拼圖驗證</li>
-<li>第五、第六、第七 步驟 驗證拼圖</li>
-</ul>
-<h1 id="串接方式"><a href="#串接方式" class="headerlink" title="串接方式"></a>串接方式</h1><ul>
-<li>進入CAPY廠商後台， 選擇 Puzzle CAPTCHA &gt; +ADD 產生一組拼圖JS</li>
-<li><p>將JS貼到HTML頁面上，並且加上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id =“capy-captcha”&gt; &lt;/ div&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用JS AJAX POST CAPY指定參數的到後端，</p>
-</li>
-<li>後端再透過 SERVER TO SERVER Form Post 將KEY 跟 指定參數一起傳到CAPY做驗證。</li>
-<li>用SERVER TO SERVER是因為 瀏覽器有檔 JS <a href="https://blog.toright.com/posts/3205/%E5%AF%A6%E4%BD%9C-cross-origin-resource-sharing-cros-%E8%A7%A3%E6%B1%BA-ajax-%E7%99%BC%E9%80%81%E8%B7%A8%E7%B6%B2%E5%9F%9F%E5%AD%98%E5%8F%96-request.html" target="_blank" rel="noopener">CORS跨網域存取</a>，而且把KEY放在SERVER端比較安全。</li>
-</ul>
-<h1 id="補充-Web-Call-Andriod-JS"><a href="#補充-Web-Call-Andriod-JS" class="headerlink" title="補充 Web Call Andriod JS"></a>補充 Web Call Andriod JS</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.MobileApp.[Andrio JS名稱]()</span><br></pre></td></tr></table></figure>
+        <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>玩了一下離線版的K8S<br>目前有的版本<br>K8S in Docker Edge vesion<br>minikube </p>
+<p>都大同小異</p>
+<h1 id="連結"><a href="#連結" class="headerlink" title="連結"></a>連結</h1><p><a href="https://kubernetes-cn.github.io/docs/tutorials/" target="_blank" rel="noopener">Kubernetes網站都有教學</a></p>
+<h1 id="Minikube-常用指令"><a href="#Minikube-常用指令" class="headerlink" title="Minikube 常用指令"></a>Minikube 常用指令</h1><p>查版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube version</span><br></pre></td></tr></table></figure></p>
+<p>啟動一個CluSTER<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube start</span><br></pre></td></tr></table></figure></p>
+<p>check health<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl cluster-info</span><br></pre></td></tr></table></figure></p>
+<p>DEPLOY一個DOCKER到K8S上 開通80PORT<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl run first-deployment --image=katacoda/docker-http-server --port=80</span><br></pre></td></tr></table></figure></p>
+<p>查看 POD<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods</span><br></pre></td></tr></table></figure></p>
+<p>對外開放IP PORT<br>PORT 代表隊外開放的<br>target-port = 對DOCKER的<br>Hostport = 轉島的PORT<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl expose deployment first-deployment --port=80 --type=NodePort</span><br></pre></td></tr></table></figure></p>
+<p>快速找到對外開的IP<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export PORT=$(kubectl get svc first-deployment -o go-template=&apos;&#123;&#123;range.spec.ports&#125;&#125;&#123;&#123;if .nodePort&#125;&#125;&#123;&#123;.nodePort&#125;&#125;&#123;&#123;&quot;\n&quot;&#125;&#125;&#123;&#123;end&#125;&#125;&#123;&#123;end&#125;&#125;&apos;)</span><br><span class="line">echo &quot;Accessing host01:$PORT&quot;</span><br><span class="line">curl host01:$PORT</span><br></pre></td></tr></table></figure></p>
+<p>還可以用儀表板看整個狀況喔<br>但其實用 <code>kubectl get all</code> 就行了</p>
+<p>查看LOG<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl describe deployment</span><br></pre></td></tr></table></figure></p>
+<p>拓展3個PODS (增加 PODS)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl scale --replicas=3 deployment</span><br></pre></td></tr></table></figure></p>
+<p>YAML 簡單版<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">apiVersion: extensions/v1beta1</span><br><span class="line">kind: Deployment</span><br><span class="line">metadata:</span><br><span class="line">  name: webapp1</span><br><span class="line">spec:</span><br><span class="line">  replicas: 1</span><br><span class="line">  template:</span><br><span class="line">    metadata:</span><br><span class="line">      labels:</span><br><span class="line">        app: webapp1</span><br><span class="line">    spec:</span><br><span class="line">      containers:</span><br><span class="line">      - name: webapp1</span><br><span class="line">        image: katacoda/docker-http-server:latest</span><br><span class="line">        ports:</span><br><span class="line">        - containerPort: 80</span><br></pre></td></tr></table></figure></p>
+<p>執行YAML<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kubectl create -f deployment.yaml</span><br><span class="line"></span><br><span class="line">```</span><br></pre></td></tr></table></figure></p>
+<p>查看DEPLOYMENT運行結果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get deployment</span><br></pre></td></tr></table></figure></p>
+<p>建一個對外SERVICE 標籤要對應好 對外30080 對DOcker內80<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">apiVersion: v1</span><br><span class="line">kind: Service</span><br><span class="line">metadata:</span><br><span class="line">  name: webapp1-svc</span><br><span class="line">  labels:</span><br><span class="line">    app: webapp1</span><br><span class="line">spec:</span><br><span class="line">  type: NodePort</span><br><span class="line">  ports:</span><br><span class="line">  - port: 80</span><br><span class="line">    nodePort: 30080</span><br><span class="line">  selector:</span><br><span class="line">    app: webapp1</span><br></pre></td></tr></table></figure></p>
+<p>容器吃環境變數<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">env:</span><br><span class="line">       - name: GET_HOSTS_FROM</span><br><span class="line">         value: dns</span><br></pre></td></tr></table></figure></p>
+<p>未完待續</p>
+
       
     </div>
     
@@ -411,15 +408,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CAPY/" rel="tag"># CAPY</a>
+            <a href="/tags/Kubernetes/" rel="tag"># Kubernetes</a>
           
-            <a href="/tags/Andriod/" rel="tag"># Andriod</a>
+            <a href="/tags/Minikue/" rel="tag"># Minikue</a>
           
-            <a href="/tags/Web/" rel="tag"># Web</a>
-          
-            <a href="/tags/JavaSciprt/" rel="tag"># JavaSciprt</a>
-          
-            <a href="/tags/Net/" rel="tag"># .Net</a>
+            <a href="/tags/Docker/" rel="tag"># Docker</a>
           
         </div>
       
@@ -432,8 +425,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/04/201807041324/" rel="next" title="Hexo + Github 快速建置自己的部落格">
-                <i class="fa fa-chevron-left"></i> Hexo + Github 快速建置自己的部落格
+              <a href="/2018/07/07/MarkDown-快速上手/" rel="next" title="MarkDown-快速上手">
+                <i class="fa fa-chevron-left"></i> MarkDown-快速上手
               </a>
             
           </div>
@@ -441,10 +434,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/04/RPC-failed-HTTP-401-curl-22-The-requested-URL-returned-error-401/" rel="prev" title="RPC failed; HTTP 401 curl 22 The requested URL returned error: 401">
-                RPC failed; HTTP 401 curl 22 The requested URL returned error: 401 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -648,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#需求"><span class="nav-number">1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CAPY拼圖驗證介紹"><span class="nav-number">2.</span> <span class="nav-text">CAPY拼圖驗證介紹</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#特色"><span class="nav-number">2.1.</span> <span class="nav-text">特色</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CAPY-拼圖驗證流程"><span class="nav-number">3.</span> <span class="nav-text">CAPY 拼圖驗證流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#串接方式"><span class="nav-number">4.</span> <span class="nav-text">串接方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#補充-Web-Call-Andriod-JS"><span class="nav-number">5.</span> <span class="nav-text">補充 Web Call Andriod JS</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目的"><span class="nav-number">1.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#連結"><span class="nav-number">2.</span> <span class="nav-text">連結</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Minikube-常用指令"><span class="nav-number">3.</span> <span class="nav-text">Minikube 常用指令</span></a></li></ol></div>
             
 
           </div>
