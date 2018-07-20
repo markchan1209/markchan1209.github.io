@@ -112,7 +112,7 @@
 <meta name="keywords" content=".NET">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mark Chan&#39;s Blog">
-<meta property="og:url" content="https://markchan1209.github.io/tags/Net/index.html">
+<meta property="og:url" content="https://markchan1209.github.io/tags/net/index.html">
 <meta property="og:site_name" content="Mark Chan&#39;s Blog">
 <meta property="og:locale" content="zh-tw">
 <meta name="twitter:card" content="summary">
@@ -146,13 +146,13 @@
 
 
 
-  <link rel="canonical" href="https://markchan1209.github.io/tags/Net/"/>
+  <link rel="canonical" href="https://markchan1209.github.io/tags/net/"/>
 
 
 
 
 
-  <title>標籤: .Net | Mark Chan's Blog</title>
+  <title>標籤: .net | Mark Chan's Blog</title>
   
 
 
@@ -272,7 +272,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>.Net<small>標籤</small>
+        <h1>.net<small>標籤</small>
         </h1>
       </div>
 
@@ -284,37 +284,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/07/16/快速測試GOOGLE-PUBSUB/" itemprop="url">
+            <a class="post-title-link" href="/2018/07/20/練習GridView/" itemprop="url">
               
-                <span itemprop="name">快速測試GOOGLE PUBSUB</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-16T23:55:54+08:00"
-              content="2018-07-16" >
-          07-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/04/CAPD-拼圖驗證串接/" itemprop="url">
-              
-                <span itemprop="name">CAPY拼圖驗證 WEB + Andriod</span>
+                <span itemprop="name">GridView + C# +Dapper + LinqPad 好站連結整理</span>
               
             </a>
         
@@ -322,9 +294,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-04T17:21:50+08:00"
-              content="2018-07-04" >
-          07-04
+              datetime="2018-07-20T16:21:06+08:00"
+              content="2018-07-20" >
+          07-20
         </time>
       </div>
 
@@ -399,7 +371,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分類</span>
                 </a>
               </div>
@@ -410,7 +382,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
@@ -792,6 +764,49 @@
               success: function(newcounter) {
                 var $element = $(document.getElementById(url));
                 $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+
+</body>
+</html>
+eancloud-visitors-count').text(newcounter.get('time'));
               },
               error: function(newcounter, error) {
                 console.log('Failed to create');
