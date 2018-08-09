@@ -98,7 +98,7 @@
 
 
 
-  <meta name="keywords" content="Web,.Net,Cloud PUBSUB," />
+  <meta name="keywords" content="C#," />
 
 
 
@@ -109,18 +109,18 @@
 
 
 
-<meta name="description" content="原由現在GOOGLE手把手教學很完整。底下是我的一些小筆記 GOOGLE 免費帳號申請個GMAIL 然後登入後搜尋GCP 點進去GCP控制台 註冊一個 有甚麼填什麼 (GOOGLE有免費三百元美金)(收費前會通知) #用GOOGLE CLOUDLAUNCHER創一個GCE MSSQL DB環境https://cloud.google.com/dotnet/docs/getting-started/">
-<meta name="keywords" content="Web,.Net,Cloud PUBSUB">
+<meta name="description" content="前言有時候在開發時，總會碰到一種需求：我希望回傳不只一個值。 想要傳入多個值比較簡單一些，因為方法參數沒有個數限制，但一般的 function 只能回傳一個值，如果要多個值，通常有幾種方式：  自訂一個 class 或 struct ，來代表這幾個值是內聚在一起描述某種相同的職責所需的特徵。 透過物件身上的 filed/member 來存放經過這個方法之後，物件狀態的轉變，需要時再取用物件狀態即可">
+<meta name="keywords" content="C#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速測試GOOGLE PUBSUB">
-<meta property="og:url" content="https://markchan1209.github.io/2018/07/16/快速測試GOOGLE-PUBSUB/index.html">
+<meta property="og:title" content="C# 7 Tuple">
+<meta property="og:url" content="https://markchan1209.github.io/2018/08/09/C-7-Tuple/index.html">
 <meta property="og:site_name" content="Mark Chan&#39;s Blog">
-<meta property="og:description" content="原由現在GOOGLE手把手教學很完整。底下是我的一些小筆記 GOOGLE 免費帳號申請個GMAIL 然後登入後搜尋GCP 點進去GCP控制台 註冊一個 有甚麼填什麼 (GOOGLE有免費三百元美金)(收費前會通知) #用GOOGLE CLOUDLAUNCHER創一個GCE MSSQL DB環境https://cloud.google.com/dotnet/docs/getting-started/">
+<meta property="og:description" content="前言有時候在開發時，總會碰到一種需求：我希望回傳不只一個值。 想要傳入多個值比較簡單一些，因為方法參數沒有個數限制，但一般的 function 只能回傳一個值，如果要多個值，通常有幾種方式：  自訂一個 class 或 struct ，來代表這幾個值是內聚在一起描述某種相同的職責所需的特徵。 透過物件身上的 filed/member 來存放經過這個方法之後，物件狀態的轉變，需要時再取用物件狀態即可">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2018-07-16T15:58:57.131Z">
+<meta property="og:updated_time" content="2018-08-09T09:43:04.614Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速測試GOOGLE PUBSUB">
-<meta name="twitter:description" content="原由現在GOOGLE手把手教學很完整。底下是我的一些小筆記 GOOGLE 免費帳號申請個GMAIL 然後登入後搜尋GCP 點進去GCP控制台 註冊一個 有甚麼填什麼 (GOOGLE有免費三百元美金)(收費前會通知) #用GOOGLE CLOUDLAUNCHER創一個GCE MSSQL DB環境https://cloud.google.com/dotnet/docs/getting-started/">
+<meta name="twitter:title" content="C# 7 Tuple">
+<meta name="twitter:description" content="前言有時候在開發時，總會碰到一種需求：我希望回傳不只一個值。 想要傳入多個值比較簡單一些，因為方法參數沒有個數限制，但一般的 function 只能回傳一個值，如果要多個值，通常有幾種方式：  自訂一個 class 或 struct ，來代表這幾個值是內聚在一起描述某種相同的職責所需的特徵。 透過物件身上的 filed/member 來存放經過這個方法之後，物件狀態的轉變，需要時再取用物件狀態即可">
 
 
 
@@ -150,13 +150,13 @@
 
 
 
-  <link rel="canonical" href="https://markchan1209.github.io/2018/07/16/快速測試GOOGLE-PUBSUB/"/>
+  <link rel="canonical" href="https://markchan1209.github.io/2018/08/09/C-7-Tuple/"/>
 
 
 
 
 
-  <title>快速測試GOOGLE PUBSUB | Mark Chan's Blog</title>
+  <title>C# 7 Tuple | Mark Chan's Blog</title>
   
 
 
@@ -283,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://markchan1209.github.io/2018/07/16/快速測試GOOGLE-PUBSUB/">
+    <link itemprop="mainEntityOfPage" href="https://markchan1209.github.io/2018/08/09/C-7-Tuple/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mark Chan">
@@ -300,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">快速測試GOOGLE PUBSUB</h1>
+          <h1 class="post-title" itemprop="name headline">C# 7 Tuple</h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-07-16T23:55:54+08:00">
-                2018-07-16
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-08-09T17:32:22+08:00">
+                2018-08-09
               </time>
             
 
@@ -335,8 +335,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/GCP/" itemprop="url" rel="index">
-                    <span itemprop="name">GCP</span>
+                  <a href="/categories/Net/" itemprop="url" rel="index">
+                    <span itemprop="name">.Net</span>
                   </a>
                 </span>
 
@@ -352,7 +352,7 @@
 
           
           
-             <span id="/2018/07/16/快速測試GOOGLE-PUBSUB/" class="leancloud_visitors" data-flag-title="快速測試GOOGLE PUBSUB">
+             <span id="/2018/08/09/C-7-Tuple/" class="leancloud_visitors" data-flag-title="C# 7 Tuple">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,16 +383,21 @@
       
 
       
-        <h1 id="原由"><a href="#原由" class="headerlink" title="原由"></a>原由</h1><p>現在GOOGLE手把手教學很完整。<br>底下是我的一些小筆記</p>
-<h1 id="GOOGLE-免費帳號"><a href="#GOOGLE-免費帳號" class="headerlink" title="GOOGLE 免費帳號"></a>GOOGLE 免費帳號</h1><p>申請個GMAIL 然後登入後搜尋GCP 點進去GCP控制台 註冊一個 有甚麼填什麼 (GOOGLE有免費三百元美金)(收費前會通知)</p>
-<p>#用GOOGLE CLOUDLAUNCHER創一個GCE MSSQL DB環境<br><a href="https://cloud.google.com/dotnet/docs/getting-started/tutorial-app" target="_blank" rel="noopener">https://cloud.google.com/dotnet/docs/getting-started/tutorial-app</a></p>
-<p>ZONE記得選 ASIA-C<br>配置的話<br>其他預設<br>裡面會創VM 選軟體 100G 還有開HTTP HTTPS 跟灌單鍵佈署的東東 還有防火牆等設定~~</p>
-<h1 id="創GCS-GOOGLE-CLOUD-STORAGE"><a href="#創GCS-GOOGLE-CLOUD-STORAGE" class="headerlink" title="創GCS (GOOGLE CLOUD STORAGE)"></a>創GCS (GOOGLE CLOUD STORAGE)</h1><p><a href="https://cloud.google.com/dotnet/docs/getting-started/using-cloud-storage" target="_blank" rel="noopener">https://cloud.google.com/dotnet/docs/getting-started/using-cloud-storage</a></p>
-<h1 id="創PUB-SUB-有GITHUB"><a href="#創PUB-SUB-有GITHUB" class="headerlink" title="創PUB SUB (有GITHUB)"></a>創PUB SUB (有GITHUB)</h1><p><a href="https://cloud.google.com/dotnet/docs/getting-started/using-pub-sub" target="_blank" rel="noopener">https://cloud.google.com/dotnet/docs/getting-started/using-pub-sub</a></p>
-<h1 id="測試"><a href="#測試" class="headerlink" title="測試"></a>測試</h1><h1 id="碰到問題整理"><a href="#碰到問題整理" class="headerlink" title="碰到問題整理"></a>碰到問題整理</h1><h2 id="F5執行時出現權限問題"><a href="#F5執行時出現權限問題" class="headerlink" title="F5執行時出現權限問題"></a>F5執行時出現權限問題</h2><p>原因是自己電腦要設很多設定跟驗證，所以直接佈到VM上面測比較快</p>
-<h2 id="500錯誤"><a href="#500錯誤" class="headerlink" title="500錯誤"></a>500錯誤</h2><p>教學檔說要一起佈到同一個資料夾，但是這樣會有錯誤<br>所以請自己切兩個站台  book寫 worker撈值</p>
-<h2 id="另外一個Newtonsoft-Json-錯誤"><a href="#另外一個Newtonsoft-Json-錯誤" class="headerlink" title="另外一個Newtonsoft.Json 錯誤"></a>另外一個Newtonsoft.Json 錯誤</h2><p>請強制把WORKER換成跟BOOKSHELF同版本的就行了</p>
-<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><p>GCP這個專案 有客端 BOOKSHELFT<br>LIB (裡面封裝PUB SUB方法)<br>WORKER 定時去撈有沒有TOPIC跟要收取的資料<br>(圖片就不補了~懶)</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>有時候在開發時，總會碰到一種需求：我希望回傳不只一個值。</p>
+<p>想要傳入多個值比較簡單一些，因為方法參數沒有個數限制，但一般的 function 只能回傳一個值，如果要多個值，通常有幾種方式：</p>
+<ol>
+<li>自訂一個 class 或 struct ，來代表這幾個值是內聚在一起描述某種相同的職責所需的特徵。</li>
+<li>透過物件身上的 filed/member 來存放經過這個方法之後，物件狀態的轉變，需要時再取用物件狀態即可。</li>
+<li>透過 out 或 byref 的宣告，把其他要回傳的多個值，在呼叫時先傳進來。</li>
+</ol>
+<h1 id="缺點"><a href="#缺點" class="headerlink" title="缺點"></a>缺點</h1><p>透過 class 或 struct 可能會碰到幾個問題：</p>
+<ol>
+<li>回傳的多個值，有時候並不帶有強烈內聚的關係。被放在 class 或是 struct 並不妥當，只是單純為了放在一起而新增了一個容器。</li>
+<li>這些 class 或 struct 有可能只被這個方法使用，為了這樣的需求而新增一個無法重用且無法明確表達同一職責的 class 或 struct, 容易撐爆跟污染你的產品。</li>
+</ol>
+<p>.NET framework 為 Tuple 定義了八個版本的泛型方法，讓你可以輕鬆建立包含多達八個、甚至更多個數值的物件。 </p>
+<p>使用 Tuple 物件時，是以 Item1、Item2…ItemN </p>
+<h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><p><a href="https://www.huanlintalk.com/post/2017-04-06-csharp-7-tuple-syntax/" target="_blank" rel="noopener">https://www.huanlintalk.com/post/2017-04-06-csharp-7-tuple-syntax/</a><br><a href="https://dotblogs.com.tw/hatelove/2013/12/12/tuple-introduction" target="_blank" rel="noopener">https://dotblogs.com.tw/hatelove/2013/12/12/tuple-introduction</a><br><a href="http://sweeteason.pixnet.net/blog/post/42659804-%5Bc%23%5D-%E4%BD%BF%E7%94%A8tuple-%E9%A1%9E%E5%88%A5%EF%BC%8C%E5%9C%A8%E5%87%BD%E6%95%B8%E4%B8%AD%E4%B8%80%E6%AC%A1%E8%BF%94%E5%9B%9E%E5%A4%9A%E5%80%8B%E5%9B%9E" target="_blank" rel="noopener">http://sweeteason.pixnet.net/blog/post/42659804-%5Bc%23%5D-%E4%BD%BF%E7%94%A8tuple-%E9%A1%9E%E5%88%A5%EF%BC%8C%E5%9C%A8%E5%87%BD%E6%95%B8%E4%B8%AD%E4%B8%80%E6%AC%A1%E8%BF%94%E5%9B%9E%E5%A4%9A%E5%80%8B%E5%9B%9E</a></p>
 
       
     </div>
@@ -410,11 +415,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Web/" rel="tag"># Web</a>
-          
-            <a href="/tags/Net/" rel="tag"># .Net</a>
-          
-            <a href="/tags/Cloud-PUBSUB/" rel="tag"># Cloud PUBSUB</a>
+            <a href="/tags/C/" rel="tag"># C#</a>
           
         </div>
       
@@ -427,8 +428,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/14/好站推薦/" rel="next" title="好站、好書、好詞推薦 不定時更新">
-                <i class="fa fa-chevron-left"></i> 好站、好書、好詞推薦 不定時更新
+              <a href="/2018/08/02/長連接、短連接/" rel="next" title="長連接、短連接">
+                <i class="fa fa-chevron-left"></i> 長連接、短連接
               </a>
             
           </div>
@@ -436,10 +437,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/20/練習GridView/" rel="prev" title="GridView + C# +Dapper + LinqPad 好站連結整理">
-                GridView + C# +Dapper + LinqPad 好站連結整理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -643,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原由"><span class="nav-number">1.</span> <span class="nav-text">原由</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GOOGLE-免費帳號"><span class="nav-number">2.</span> <span class="nav-text">GOOGLE 免費帳號</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#創GCS-GOOGLE-CLOUD-STORAGE"><span class="nav-number">3.</span> <span class="nav-text">創GCS (GOOGLE CLOUD STORAGE)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#創PUB-SUB-有GITHUB"><span class="nav-number">4.</span> <span class="nav-text">創PUB SUB (有GITHUB)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#測試"><span class="nav-number">5.</span> <span class="nav-text">測試</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#碰到問題整理"><span class="nav-number">6.</span> <span class="nav-text">碰到問題整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#F5執行時出現權限問題"><span class="nav-number">6.1.</span> <span class="nav-text">F5執行時出現權限問題</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#500錯誤"><span class="nav-number">6.2.</span> <span class="nav-text">500錯誤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#另外一個Newtonsoft-Json-錯誤"><span class="nav-number">6.3.</span> <span class="nav-text">另外一個Newtonsoft.Json 錯誤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#結論"><span class="nav-number">7.</span> <span class="nav-text">結論</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#缺點"><span class="nav-number">2.</span> <span class="nav-text">缺點</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#參考"><span class="nav-number">3.</span> <span class="nav-text">參考</span></a></li></ol></div>
             
 
           </div>
